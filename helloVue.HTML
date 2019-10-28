@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello Vue</title>
+	<script src="https://unpkg.com/vue@2.6.7/dist/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<h1>Hello Vue<h1>
+		<p>
+			{{message|uppercase}}
+		</p>
+		
+		<button @click="addExclamation">Add !</button>
+	</div>
+	
+	<script>
+		let app = new Vue({
+			el: "#app",
+			data: {
+				message: "hi!",
+				exclamLevel: 0
+			},
+			methods: {
+				addExclamation(){
+					if(this.exclamLevel <=10){
+						this.message += "!"
+						this.exclamLevel ++
+					}
+				}
+			},
+			filters: {
+				uppercase(string){
+					return string.toUpperCase()
+				}
+			}
+		})
+	</script>
+</body>
+</html>
