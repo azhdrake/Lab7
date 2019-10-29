@@ -1,0 +1,1 @@
+Question 2: That error means that you used a variable that you never initialized in the app. To fix it you would define "total" in the app, either in data, or more likely, in computed. 
