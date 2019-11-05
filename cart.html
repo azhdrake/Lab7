@@ -21,7 +21,7 @@
 				<td>{{name}}</td>
 				<td>${{unitPrice}}</td>
 				<td><input type="number" id="quantity" v-model="quantity"></td>
-				<td id="total">${{total|idontunderstandwhatshappeningherebuticanfixit(2)}}</td>
+				<td id="total">${{total|decimalFix(2)}}</td>
 			</tr>
 	</div>
 	
@@ -37,7 +37,7 @@
 				
 			},
 			filters: {
-				idontunderstandwhatshappeningherebuticanfixit(price, decimalPlaces){
+				decimalFix(price, decimalPlaces){
 					return price.toFixed(decimalPlaces)
 				}
 			},
