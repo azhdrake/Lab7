@@ -7,7 +7,7 @@
 
 <body>
 	<div id="app">
-		<h1>Hello Vue<h1>
+		<h1>Hello Vue</h1>
 		<p>
 			{{message|uppercase}}
 		</p>
@@ -19,12 +19,14 @@
 		let app = new Vue({
 			el: "#app",
 			data: {
-				message: "hi!",
-				exclamLevel: 0
+        message: "hi!",
+        // exclamLevel starts at one because we start with one !.
+				exclamLevel: 1
 			},
 			methods: {
-				addExclamation(){
-					if(this.exclamLevel <=10){
+        addExclamation() {
+          // only adds ! if there are less then ten.
+					if(this.exclamLevel <10){
 						this.message += "!"
 						this.exclamLevel ++
 					}
