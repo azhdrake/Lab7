@@ -7,10 +7,11 @@
 
 <body>
 	<div id="app">
-		<h1>Hello Vue<h1>
+		<h1>Hello Vue</h1>
 		<label for="name">Please enter your name: </label>
 		<input v-model="name" id="name">
 		<p v-if="name">
+      <!-- gets name from app data and desplays it here. -->
 			You are {{name}}
 		</p>
 	</div>
